@@ -1,0 +1,1 @@
+#!/bin/bash\ntail -n10 /etc/passwd
