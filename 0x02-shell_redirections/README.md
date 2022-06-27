@@ -1,4 +1,3 @@
-A script that prints helloWorld
-Script to show smiley face
-eecho Scrpt to display contents of a file
-Scrpt to display contents of a file
+A script that prints hello world
+A script that prints a smiley face
+A script that prints the contents of a file
