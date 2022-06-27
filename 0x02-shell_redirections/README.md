@@ -1,1 +1,1 @@
-Added a file that has scrip redirections
+A script that prints helloWorld
