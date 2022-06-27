@@ -5,3 +5,4 @@ Added a script to file display contents of two files
 Added a file to list last lines of code
 Added afile to list 5 lines of header of a file
 Added a script to print only the 3rd line from the file iaca
+Added a script best schoo 
