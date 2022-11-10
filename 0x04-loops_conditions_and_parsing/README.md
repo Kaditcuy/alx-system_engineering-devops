@@ -25,3 +25,10 @@
 > - displays bad luck for the 4th loop iteration
 > - displays good luck for the 8th loop iteration
 > - displays Best School for the other iterations
+
+### 6. Superstitious numbers
+* Bash script that displays numbers from 1 to 20 and:
+
+> - displays 4 and then bad luck from China for the 4th loop iteration
+> - displays 9 and then bad luck from Japan for the 9th loop iteration
+> - displays 17 and then bad luck from Italy for the 17th loop iteration
