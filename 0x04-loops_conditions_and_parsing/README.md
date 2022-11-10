@@ -52,3 +52,6 @@
 > - -f(checks if file is a regular file)
 > - -s(checks to make sure file is not empty)
 > - -e(checks if file exists)
+
+### 10. FizzBuzz
+*  Bash script that displays numbers from 1 to 100, implementing FizzBuzz.
