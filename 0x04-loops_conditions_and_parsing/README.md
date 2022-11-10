@@ -38,3 +38,10 @@
 
 > - display hours from 0 to 12
 > - display minutes from 1 to 59
+
+### 8. For ls
+* Bash script that displays:
+
+> - The content of the current directory
+> - In a list format
+> - Where only the part of the name after the first dash is displayed (refer to the example)
