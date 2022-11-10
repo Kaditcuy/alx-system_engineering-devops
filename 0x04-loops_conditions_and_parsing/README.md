@@ -45,3 +45,10 @@
 > - The content of the current directory
 > - In a list format
 > - Where only the part of the name after the first dash is displayed (refer to the example)
+
+### 9. To file, or not to file
+* Bash script that gives you information about the school file.
+
+> - -f(checks if file is a regular file)
+> - -s(checks to make sure file is not empty)
+> - -e(checks if file exists)
