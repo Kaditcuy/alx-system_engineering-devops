@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Bash script for reconfiguring the listening port of nginx server
+sudo sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+# Kill nginx running process
+sudo pkill -1 nginx
