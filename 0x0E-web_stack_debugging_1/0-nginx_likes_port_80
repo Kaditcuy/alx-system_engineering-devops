@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Bash Script to configure nginx server in such a way that it listens on port 80
+
+# Deleting default file in site-enabled
+sudo rm -f /etc/nginx/sites-enabled/default
+
+# Another way is using sed to change the value in the file to 80, prerequiste that you know what exactly port nginx was listening to first.
+# sed -i 's/8080/80/g /etc/nginx/sites-enabled/default
+
+# Symlinking sites-enabled default file to point to sites-avaialable default file make sure sites-enabled default file doesnt exist
+sudo ln -s /etc/nginx/sites-available/default etc/nginx/sites-enabled/default
+
+# Restart nginx server
+service nginx restart
