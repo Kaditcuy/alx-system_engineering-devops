@@ -50,5 +50,3 @@ sudo sed -i "s|http {|$redirect|" /etc/nginx/nginx.conf
 
 # Restart nginx without using systemctl
 sudo service nginx restart
-
-sudo service nginx restart
