@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# Function to display information for a specific subdomain
+
+display_subdomain_info() {
+  subdomain=$1
+  domain=$2
+
+# Use dig to query DNS record for subdomain
+# Use awk to extract record type and destination, remove trailing dot and remove the domain name from subdomain
+  dig_output=$(dig ${subdomain}.${domain} | awk '/ANSWER SECTION:/{getline; gsub(/.$/,"",$1); gsub(/[.].*/,"", $1); print "The subdomain " $1 " is a " $4 " record and points to " $5}')
+
+# Display information
+  echo "$dig_output"
+}
+
+# Get domain name from command line argument
+domain=$1
+
+# If subdomain argument is provided, display information for that subdomain
+if [ "$#" -eq 2 ]; then
+  subdomain=$2
+  display_subdomain_info $subdomain $domain
+else
+  # Display information for www, lb-01, web-01, and web-02 subdomains
+  display_subdomain_info "www" $domain
+  display_subdomain_info "lb-01" $domain
+  display_subdomain_info "web-01" $domain
+  display_subdomain_info "web-02" $domain
+fi
