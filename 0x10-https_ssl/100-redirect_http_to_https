@@ -48,7 +48,7 @@ frontend www-http
 
 # This is our new config that listens on port 443 for SSL connections
 frontend www-https
-	bind *:443 ssl crt /etc/haproxy/certs/www.david-inkheart.tech.pem
+	bind *:443 ssl crt /etc/haproxy/certs/www.philipukanwoke.tech.pem
 	http-request set-header X-Forwarded-Proto https
 	acl letsencrypt-acl path_beg /.well-known/acme-challenge/
 	use_backend letsencrypt-backend if letsencrypt-acl
@@ -56,8 +56,8 @@ frontend www-https
 
 backend www-backend
 	balance roundrobin
-	server 81244-web-01 35.153.52.152:80 check
-	server 81244-web-02 54.160.77.140:80 check
+	server 83670-web-01 18.207.207.11:80 check
+	server 83670-web-02 35.174.208.65:80 check
 
 backend letsencrypt-backend
    server letsencrypt 127.0.0.1:54321
