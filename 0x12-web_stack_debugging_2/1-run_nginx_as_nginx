@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# script that configures a comntaineir.
+
+# apache currently runs on the port needed :8080
+pkill apache2
+
+# make nginx run on all port :8080
+sudo sed -i "s/80/8080/g" /etc/nginx/sites-available/default
+
+#create nginx user if it doesnt exist
+sudo useradd -s /bin/false nginx
+
+# change user to nginx in all nginx files
+sudo chown -R nginx:nginx /etc/nginx /var/log/nginx /usr/share/nginx
+
+#give read and write access to the config folder
+sudo chmod 0644 /etc/nginx/nginx.conf
+
+# run nginx as new user
+sudo su nginx -c nginx
