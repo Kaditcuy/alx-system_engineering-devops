@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# script that runs whoami comand as another user
+if id "$1" &>/dev/null; then
+	sudo -u "$1" bash -c 'whoami'
+else
+	useradd -m "$1"
+	sudo -u "$1" bash -c 'whoami'
+fi
