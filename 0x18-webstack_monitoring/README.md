@@ -6,3 +6,7 @@
 ```
 For context: Datadog is a monitoring software
 ```
+
+* gethost.sh -> Script to validate server/host running datadog agent
+
+References: https://www.linkedin.com/pulse/error-forbidden-datadog-postmortem-andres-castaneda/?trk=public_profile_article_view
