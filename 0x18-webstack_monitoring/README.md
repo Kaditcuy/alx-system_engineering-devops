@@ -17,3 +17,6 @@ References: https://www.linkedin.com/pulse/error-forbidden-datadog-postmortem-an
 	system.io.r_s --> read
 	system.io.w_s --> write
 	```
+
+* 2) Set up a dashboard and fetched its id using datadogs api
+	seen in `getDashID.sh` script.
