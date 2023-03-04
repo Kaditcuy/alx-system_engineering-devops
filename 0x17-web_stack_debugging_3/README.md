@@ -39,4 +39,4 @@ will display the last 10lines of the files and keep updating the entries as new 
 	pgrep -lf <name of the process> -> gives process pid
 	```
 
-Used strace -p <pid> -e trace=open,read,write  to attach the aapache service process for monitoring for all read open and write system calls apache will make, then i curled my loopback which is being hosted by apache to see exactly what the error is with apache that was given a 500 Internal server error, it was an open system call to a wordpress file that had a misspelling of phpp instead of php, the script 0-strace_is_your_friend.pp is a puppet script that fixes the above error
+Used strace -p (pid of process to attach to strace) -e trace=open,read,write  to attach the aapache service process for monitoring for all read open and write system calls apache will make, then i curled my loopback which is being hosted by apache to see exactly what the error is with apache that was given a 500 Internal server error, it was an open system call to a wordpress file that had a misspelling of phpp instead of php, the script 0-strace_is_your_friend.pp is a puppet script that fixes the above error
