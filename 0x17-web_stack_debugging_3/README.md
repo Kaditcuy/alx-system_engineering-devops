@@ -40,3 +40,10 @@ will display the last 10lines of the files and keep updating the entries as new 
 	```
 
 Used strace -p (pid of process to attach to strace) -e trace=open,read,write  to attach the aapache service process for monitoring for all read open and write system calls apache will make, then i curled my loopback which is being hosted by apache to see exactly what the error is with apache that was given a 500 Internal server error, it was an open system call to a wordpress file that had a misspelling of phpp instead of php, the script 0-strace_is_your_friend.pp is a puppet script that fixes the above error
+
+## Side notes and more:
+REcently encountered something that i woud like to note here, so flask by default listens on port 5000, so i started the flask server with a python script and i noticed that port 5000 was in use, this was how i solved it
+
+* sudo lsof -i | grep :5000 -> To see the process id and name associated with it
+* ps -p <PID> -o comm -> to get more details about the process
+* sudo kill <pid> -> to terminate it
