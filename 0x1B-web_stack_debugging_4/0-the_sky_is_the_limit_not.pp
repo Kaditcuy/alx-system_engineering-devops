@@ -2,10 +2,11 @@
 
 
 exec { 'Nginx-max_file_dp-fix':
-	command => "/bin/sed -i /etc/default/nginx -e 's/15/4096/'",
+  command => "/bin/sed -i /etc/default/nginx -e 's/15/4096/'",
 }
 
 exec { 'restart nginx':
-	command => '/usr/bin/service nginx restart',
-	require => Exec['Nginx-max_file_dp-fix']
+  command => '/usr/bin/service nginx restart',
+  require => Exec['Nginx-max_file_dp-fix']
 }
+
